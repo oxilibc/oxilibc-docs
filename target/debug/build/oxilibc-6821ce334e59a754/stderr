@@ -1,0 +1,1 @@
+clang diag: include/stdint.h:331:20: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]

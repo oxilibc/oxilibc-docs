@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="string.h"><meta name="keywords" content="rust, rustlang, rust-lang, string"><title>oxilibc::string - Rust</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" href="../../normalize.css"><link rel="stylesheet" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" href="../../ayu.css" disabled><link rel="stylesheet" href="../../dark.css" disabled><link rel="stylesheet" href="../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../storage.js"></script><script defer src="../../main.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"></head><body class="rustdoc mod"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../oxilibc/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div></a><h2></h2></nav><nav class="sidebar"><a class="sidebar-logo" href="../../oxilibc/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div></a><h2 class="location"><a href="#">Module string</a></h2><div class="sidebar-elems"><section><ul class="block"><li><a href="#functions">Functions</a></li></ul></section></div></nav><main><div class="width-limiter"><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../wheel.svg"></a></div></form></nav><section id="main-content" class="content"><div class="main-heading"><h1 class="fqn">Module <a href="../index.html">oxilibc</a>::<wbr><a class="mod" href="#">string</a><button id="copy-path" onclick="copy_path(this)" title="Copy item path to clipboard"><img src="../../clipboard.svg" width="19" height="18" alt="Copy item path"></button></h1><span class="out-of-band"><a class="srclink" href="../../src/oxilibc/string.rs.html#1-1956">source</a> · <button id="toggle-all-docs" title="collapse all docs">[<span>&#x2212;</span>]</button></span></div><details class="rustdoc-toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>string.h</p>
+<h2 id="compliance"><a href="#compliance">Compliance</a></h2><h3 id="std-c--11"><a href="#std-c--11">STD C &lt; 11</a></h3>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+memchr</li>
+<li><input disabled="" type="checkbox" checked=""/>
+memcmp</li>
+<li><input disabled="" type="checkbox" checked=""/>
+memset</li>
+<li><input disabled="" type="checkbox" checked=""/>
+memcpy</li>
+<li><input disabled="" type="checkbox" checked=""/>
+memmove</li>
+<li><input disabled="" type="checkbox" checked=""/>
+strcpy</li>
+<li><input disabled="" type="checkbox" checked=""/>
+strncpy</li>
+<li><input disabled="" type="checkbox" checked=""/>
+strcat</li>
+<li><input disabled="" type="checkbox" checked=""/>
+strncat</li>
+<li><input disabled="" type="checkbox"/>
+strxfrm</li>
+<li><input disabled="" type="checkbox" checked=""/>
+strlen</li>
+<li><input disabled="" type="checkbox" checked=""/>
+strcmp</li>
+<li><input disabled="" type="checkbox" checked=""/>
+strncmp</li>
+<li><input disabled="" type="checkbox"/>
+strcoll</li>
+<li><input disabled="" type="checkbox" checked=""/>
+strchr</li>
+<li><input disabled="" type="checkbox" checked=""/>
+strrchr</li>
+<li><input disabled="" type="checkbox" checked=""/>
+strspn</li>
+<li><input disabled="" type="checkbox" checked=""/>
+strcspn</li>
+<li><input disabled="" type="checkbox" checked=""/>
+strpbrk</li>
+<li><input disabled="" type="checkbox" checked=""/>
+strstr</li>
+<li><input disabled="" type="checkbox"/>
+strtok</li>
+<li><input disabled="" type="checkbox"/>
+strerror</li>
+</ul>
+<h3 id="std-c-11"><a href="#std-c-11">STD C 11</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"/>
+memset_s</li>
+<li><input disabled="" type="checkbox"/>
+memcpy_s</li>
+<li><input disabled="" type="checkbox"/>
+memmove_s</li>
+<li><input disabled="" type="checkbox"/>
+strcpy_s</li>
+<li><input disabled="" type="checkbox"/>
+strncpy_s</li>
+<li><input disabled="" type="checkbox"/>
+strcat_s</li>
+<li><input disabled="" type="checkbox"/>
+strncat_s</li>
+<li><input disabled="" type="checkbox" checked=""/>
+strnlen_s</li>
+<li><input disabled="" type="checkbox"/>
+strtok_s</li>
+<li><input disabled="" type="checkbox"/>
+strerror_s</li>
+<li><input disabled="" type="checkbox"/>
+strerrorlen_s</li>
+</ul>
+<h3 id="std-c-23"><a href="#std-c-23">STD C 23</a></h3>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+memccpy</li>
+<li><input disabled="" type="checkbox"/>
+strdup</li>
+<li><input disabled="" type="checkbox"/>
+strndup</li>
+</ul>
+<h3 id="ieee-posix-std-10031-2017-that-are-not-part-of-current-defined-c-stantards"><a href="#ieee-posix-std-10031-2017-that-are-not-part-of-current-defined-c-stantards">IEEE POSIX Std 1003.1-2017 (That are not part of current defined C stantards)</a></h3>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+strnlen</li>
+<li><input disabled="" type="checkbox" checked=""/>
+stpcpy</li>
+<li><input disabled="" type="checkbox" checked=""/>
+stpncpy</li>
+<li><input disabled="" type="checkbox"/>
+strsignal</li>
+<li><input disabled="" type="checkbox"/>
+strcoll_l</li>
+<li><input disabled="" type="checkbox"/>
+strxfrm_l</li>
+<li><input disabled="" type="checkbox"/>
+strerror_l</li>
+<li><input disabled="" type="checkbox"/>
+strtok_r</li>
+<li><input disabled="" type="checkbox"/>
+strerror_r</li>
+</ul>
+<h2 id="extensions"><a href="#extensions">Extensions</a></h2>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+memrchr</li>
+<li><input disabled="" type="checkbox" checked=""/>
+memmem</li>
+<li><input disabled="" type="checkbox" checked=""/>
+memrmem</li>
+</ul>
+<p>Maybe add extensions of memchr/memmem function family that returns the index of the found
+pointer</p>
+</div></details><h2 id="functions" class="small-section-header"><a href="#functions">Functions</a></h2><div class="item-table"><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.memccpy.html" title="oxilibc::string::memccpy fn">memccpy</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Copy bytes from <code>src</code> to <code>dest</code> until <code>c</code> byte is found, returning a pointer to the byte after
+the position of <code>c</code> in <code>dest</code>, or until <code>len</code> bytes are copied, returning a NULL pointer.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.memchr.html" title="oxilibc::string::memchr fn">memchr</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Search for the first occurrence of a <code>byte</code> in a <code>source</code> first <code>len</code> bytes, returning a pointer
+to the found the <code>byte</code> or a null pointer it the <code>byte</code> was not found.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.memcmp.html" title="oxilibc::string::memcmp fn">memcmp</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Compares the first <code>len</code> bytes of the objects pointed to by <code>source</code> and <code>other</code> and returning:</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.memcpy.html" title="oxilibc::string::memcpy fn">memcpy</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Copy the first <code>len</code> bytes from <code>src</code> to <code>dest</code>, returning <code>dest</code> itself.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.memmem.html" title="oxilibc::string::memmem fn">memmem</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Search for the first occurrence of a <code>pattern</code> of <code>pattern_len</code> size in a <code>src</code> first <code>len</code>
+bytes, returning a pointer to the first byte of the found <code>pattern</code> or a null pointer it the
+<code>pattern</code> was not found.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.memmove.html" title="oxilibc::string::memmove fn">memmove</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Copy the first <code>len</code> bytes from <code>src</code> to <code>dest</code>, returning <code>dest</code>.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.memrchr.html" title="oxilibc::string::memrchr fn">memrchr</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Search for the last occurrence of a <code>byte</code> in a <code>source</code> first <code>len</code> bytes, returning a pointer
+to the found the <code>byte</code> or a null pointer it the <code>byte</code> was not found.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.memrmem.html" title="oxilibc::string::memrmem fn">memrmem</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Search for the last occurrence of a <code>pattern</code> of <code>pattern_len</code> size in a <code>src</code> first <code>len</code>
+bytes, returning a pointer to the first byte of the found <code>pattern</code> or a null pointer it the
+<code>pattern</code> was not found.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.memset.html" title="oxilibc::string::memset fn">memset</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Set the first <code>len</code> bytes of <code>src</code> to the value of <code>val</code>, returning the <code>src</code>.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.stpcpy.html" title="oxilibc::string::stpcpy fn">stpcpy</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Copies the characters from the <code>src</code> string to the <code>dest</code>, returning a pointer to the end of the
+string, in other words, the first null character.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.stpncpy.html" title="oxilibc::string::stpncpy fn">stpncpy</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Copies the at least <code>max_size</code> characters from the <code>src</code> string to the <code>dest</code>, returning
+a pointer to the end of the string, in other words, the first null character.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.strcat.html" title="oxilibc::string::strcat fn">strcat</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Appends a copy of the <code>src</code> string to the <code>dest</code> string, returning a pointer to the beginning of
+the <code>dest</code> string.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.strchr.html" title="oxilibc::string::strchr fn">strchr</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Search for the first occurrence of a <code>ch</code> in a <code>str</code>, returning a pointer to the found the <code>ch</code>
+or a null pointer it the <code>ch</code> was not found.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.strcmp.html" title="oxilibc::string::strcmp fn">strcmp</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Compares <code>str1</code> and <code>str2</code> null terminated strings lexicographically. Returning:</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.strcpy.html" title="oxilibc::string::strcpy fn">strcpy</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Copies the <code>src</code> string, including the null terminator, to the <code>dest</code>, returning <code>dest</code> itself.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.strcspn.html" title="oxilibc::string::strcspn fn">strcspn</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Returns the length of the maximum initial segment (span) of the byte string pointed to by <code>str</code>,
+that consists of only the characters <em>not</em> found in the byte string pointed to by <code>char_set</code>.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.strlen.html" title="oxilibc::string::strlen fn">strlen</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Returns the length of the given null terminated string <code>str</code>.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.strncat.html" title="oxilibc::string::strncat fn">strncat</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Appends a copy of the <code>src</code> string to the <code>dest</code> string for at least <code>max_size</code> characters,
+returning a pointer to the beginning of the <code>dest</code> string.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.strncmp.html" title="oxilibc::string::strncmp fn">strncmp</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Compares <code>str1</code> and <code>str2</code> for a maximum of <code>max_size</code> strings lexicographically. Returning:</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.strncpy.html" title="oxilibc::string::strncpy fn">strncpy</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Copies the at least <code>max_size</code> characters from the <code>src</code> string to the <code>dest</code>, returning
+<code>dest</code> itself.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.strnlen.html" title="oxilibc::string::strnlen fn">strnlen</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">A safer version of <a href="fn.strlen.html" title="strlen">strlen</a>. This function returns:</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.strnlen_s.html" title="oxilibc::string::strnlen_s fn">strnlen_s</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">A safer version of <a href="fn.strlen.html" title="strlen">strlen</a>. This function returns:</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.strpbrk.html" title="oxilibc::string::strpbrk fn">strpbrk</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Search for the first ocorrence of any character of <code>break_set</code> in the <code>str</code>, returning a pointer
+to the first character ocurrence or a null pointer if none found.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.strrchr.html" title="oxilibc::string::strrchr fn">strrchr</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Search for the last occurrence of a <code>ch</code> in a <code>str</code>, returning a pointer to the found the <code>ch</code>
+or a null pointer it the <code>ch</code> was not found.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.strspn.html" title="oxilibc::string::strspn fn">strspn</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Returns the length of the maximum initial segment (span) of the byte string pointed to by <code>str</code>,
+that consists of only the characters found in the byte string pointed to by <code>char_set</code>.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.strstr.html" title="oxilibc::string::strstr fn">strstr</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Search for the first occurrence of a <code>pattern</code> in a <code>src</code>, returning a pointer
+to the first character of the found the <code>pattern</code> or a null pointer it the <code>pattern</code> was not
+found.</div></div></div></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="oxilibc" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.67.0-nightly (edf018221 2022-11-02)" ></div></body></html>

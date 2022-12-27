@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":[["allocator","OxiAllocator, the allocator of the OxiLibC"],["limits","limits.h"],["stdarg","stdarg.h"],["stdbool","stdbool.h"],["stddef","stddef.h"],["stdint","stdint.h"],["string","string.h"],["strings","strings.h"]],"trait":[["PointersOverlap",""]]};

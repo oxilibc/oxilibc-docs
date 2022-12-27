@@ -1,0 +1,44 @@
+[package]
+name = "oxilibc"
+authors = ["Eric Shimizu Karbstein <gr41.j4ck@gmail.com>"]
+version = "0.1.0"
+license = "MPL-2.0-no-copyleft-exception"
+build = "build.rs"
+edition = "2021"
+rust-version = "1.64.0"
+description = "A libc implemented in Rust"
+categories = ["external-ffi-bindings", "no-std", "os"]
+keywords = ["libc", "ffi", "operating", "system"]
+exclude = ["/.github", "/.vscode"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+doctest = false
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+lto = true
+
+[dependencies]
+cty = "0.2.2"
+memchr = { version = "2.4.1", default-features = false }
+mimalloc = "0.1.27"
+rbitset = "0.3.1"
+# bstr = { version = "0.2.17", default-features = false }
+# cstr_core = "0.2.5"
+
+[dev-dependencies]
+# inline-c = "0.1.6"
+
+[build-dependencies]
+bindgen = "0.60.1"
+cbindgen = "0.24.3"
+walkdir = "2"
+
+[features]
+rlib = []
+# unicode = ["bstr/unicode"]

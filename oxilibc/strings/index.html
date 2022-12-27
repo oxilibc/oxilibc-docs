@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="strings.h"><meta name="keywords" content="rust, rustlang, rust-lang, strings"><title>oxilibc::strings - Rust</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" href="../../normalize.css"><link rel="stylesheet" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" href="../../ayu.css" disabled><link rel="stylesheet" href="../../dark.css" disabled><link rel="stylesheet" href="../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../storage.js"></script><script defer src="../../main.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"></head><body class="rustdoc mod"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../oxilibc/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div></a><h2></h2></nav><nav class="sidebar"><a class="sidebar-logo" href="../../oxilibc/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div></a><h2 class="location"><a href="#">Module strings</a></h2><div class="sidebar-elems"><section><ul class="block"><li><a href="#functions">Functions</a></li></ul></section></div></nav><main><div class="width-limiter"><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../wheel.svg"></a></div></form></nav><section id="main-content" class="content"><div class="main-heading"><h1 class="fqn">Module <a href="../index.html">oxilibc</a>::<wbr><a class="mod" href="#">strings</a><button id="copy-path" onclick="copy_path(this)" title="Copy item path to clipboard"><img src="../../clipboard.svg" width="19" height="18" alt="Copy item path"></button></h1><span class="out-of-band"><a class="srclink" href="../../src/oxilibc/strings.rs.html#1-578">source</a> · <button id="toggle-all-docs" title="collapse all docs">[<span>&#x2212;</span>]</button></span></div><details class="rustdoc-toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>strings.h</p>
+<p>Although not part of the Standard C, it is part of POSIX Standard, but most functions are
+generic enough to make then available on all platforms</p>
+<h2 id="compliance"><a href="#compliance">Compliance</a></h2><h3 id="ieee-posix-std-10031-2008"><a href="#ieee-posix-std-10031-2008">IEEE POSIX Std 1003.1-2008</a></h3>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+bcmp</li>
+<li><input disabled="" type="checkbox" checked=""/>
+bcopy</li>
+<li><input disabled="" type="checkbox" checked=""/>
+bzero</li>
+<li><input disabled="" type="checkbox" checked=""/>
+ffs</li>
+<li><input disabled="" type="checkbox" checked=""/>
+strcasecmp</li>
+<li><input disabled="" type="checkbox" checked=""/>
+strncasecmp</li>
+<li><input disabled="" type="checkbox" checked=""/>
+index</li>
+<li><input disabled="" type="checkbox" checked=""/>
+rindex</li>
+</ul>
+<h3 id="ieee-posix-std-10031-2017"><a href="#ieee-posix-std-10031-2017">IEEE POSIX Std 1003.1-2017</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"/>
+strcasecmp_l</li>
+<li><input disabled="" type="checkbox"/>
+strncasecmp_l</li>
+</ul>
+<h3 id="extensions"><a href="#extensions">Extensions</a></h3>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+ffsl</li>
+<li><input disabled="" type="checkbox" checked=""/>
+ffsll</li>
+<li><input disabled="" type="checkbox"/>
+fls</li>
+<li><input disabled="" type="checkbox"/>
+flsl</li>
+<li><input disabled="" type="checkbox"/>
+flsll</li>
+</ul>
+</div></details><h2 id="functions" class="small-section-header"><a href="#functions">Functions</a></h2><div class="item-table"><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.bcmp.html" title="oxilibc::strings::bcmp fn">bcmp</a><sup title="unsafe function">⚠</sup><span class="stab deprecated" title="">Deprecated</span></div><div class="item-right docblock-short">This function is the same as <a href="../string/fn.memcmp.html" title="memcmp"><code>memcmp</code></a> function defined on the <code>string.h</code>. For all intents and
+purposes, use <a href="../string/fn.memcmp.html" title="memcmp"><code>memcmp</code></a> instead.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.bcopy.html" title="oxilibc::strings::bcopy fn">bcopy</a><sup title="unsafe function">⚠</sup><span class="stab deprecated" title="">Deprecated</span></div><div class="item-right docblock-short">This function is the same as <a href="../string/fn.memmove.html" title="memmove"><code>memmove</code></a> function defined on the <code>string.h</code>. For all intents and
+purposes, use <a href="../string/fn.memmove.html" title="memmove"><code>memmove</code></a> instead.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.bzero.html" title="oxilibc::strings::bzero fn">bzero</a><sup title="unsafe function">⚠</sup><span class="stab deprecated" title="">Deprecated</span></div><div class="item-right docblock-short">This function is the same as <a href="../string/fn.memset.html" title="memset"><code>memset</code></a> function defined on the <code>string.h</code> with <code>val</code> equal to
+zero. For all intents and purposes, use <a href="../string/fn.memset.html" title="memset"><code>memset</code></a> instead.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.ffs.html" title="oxilibc::strings::ffs fn">ffs</a></div><div class="item-right docblock-short">Finds the first bit set (beginning with the least significant bit) and returns the index of that
+bit of the given <code>word</code>.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.ffsl.html" title="oxilibc::strings::ffsl fn">ffsl</a></div><div class="item-right docblock-short">Finds the first bit set (beginning with the least significant bit) and returns the index of that
+bit of the given <code>word</code>.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.ffsll.html" title="oxilibc::strings::ffsll fn">ffsll</a></div><div class="item-right docblock-short">Finds the first bit set (beginning with the least significant bit) and returns the index of that
+bit of the given <code>word</code>.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.index.html" title="oxilibc::strings::index fn">index</a><sup title="unsafe function">⚠</sup><span class="stab deprecated" title="">Deprecated</span></div><div class="item-right docblock-short">This function is the same as <a href="../string/fn.strchr.html" title="strchr"><code>strchr</code></a> function defined on the <code>string.h</code> with <code>val</code> equal to
+zero. For all intents and purposes, use <a href="../string/fn.strchr.html" title="strchr"><code>strchr</code></a> instead.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.rindex.html" title="oxilibc::strings::rindex fn">rindex</a><sup title="unsafe function">⚠</sup><span class="stab deprecated" title="">Deprecated</span></div><div class="item-right docblock-short">This function is the same as <a href="../string/fn.strrchr.html" title="strrchr"><code>strrchr</code></a> function defined on the <code>string.h</code> with <code>val</code> equal to
+zero. For all intents and purposes, use <a href="../string/fn.strrchr.html" title="strrchr"><code>strrchr</code></a> instead.</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.strcasecmp.html" title="oxilibc::strings::strcasecmp fn">strcasecmp</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Compares the string at <code>str1</code> to the string at <code>str2</code> in a case-insensitive manner, returning:</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.strncasecmp.html" title="oxilibc::strings::strncasecmp fn">strncasecmp</a><sup title="unsafe function">⚠</sup></div><div class="item-right docblock-short">Compares the string at <code>str1</code> to the string at <code>str2</code> in a case-insensitive manner until the
+<code>len</code> or one of the strings get to the end, returning:</div></div></div></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="oxilibc" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.67.0-nightly (edf018221 2022-11-02)" ></div></body></html>

@@ -1,0 +1,28 @@
+sys_includes = ["bits/assert.h"]
+include_guard = "_OXILIBC_ASSERT_H"
+language = "C"
+style = "Tag"
+no_includes = true
+cpp_compat = true
+tab_width = 4
+documentation_style = "c++"
+
+header = """
+/*
+ * Copyright (c) 2022, Eric Shimizu Karbstein
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+/// @file assert.h
+"""
+
+[defines]
+
+[fn]
+sort_by = "Name"
+
+[enum]
+prefix_with_name = true

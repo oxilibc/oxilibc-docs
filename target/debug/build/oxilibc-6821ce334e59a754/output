@@ -1,0 +1,5 @@
+cargo:rustc-link-lib=dylib=System
+cargo:rerun-if-changed="src/string.rs"
+cargo:rerun-if-changed="src/string/cbindgen.toml"
+cargo:rerun-if-changed="src/strings.rs"
+cargo:rerun-if-changed="src/strings/cbindgen.toml"
